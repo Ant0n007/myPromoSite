@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+
+        <title>Anton Tkachov</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="css/justified-nav.css" rel="stylesheet">
+
+        <script type="text/javascript" src="js/vendor/jquery-2.1.1.js"></script>
+
+        <script type="text/javascript">
+            function changePage(pageName) {
+                $('.nav li').removeClass("active");
+                $('#' + pageName + 'Link').addClass("active");
+                $('#changebleBlock').load(pageName + ".html");
+                return false;
+            }
+            ;
+        </script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="masthead">
+                <h3 class="text-muted">Anton Tkachov</h3>
+                    <ul class="nav nav-justified">
+                        <li id='aboutMeLink' class="active"><a onclick="changePage('aboutMe');">About me</a></li>
+                        <li id='skillsLink'><a onclick="changePage('skills');">Skills&experience</a></li>
+                        <li id='educationLink'><a onclick="changePage('education');">Education</a></li>
+                        <li id='projectsLink'><a onclick="changePage('projects');">Projects</a></li>
+                        <li id='myBlogLink'><a onclick="changePage('myBlog');">My blog</a></li>
+                        <li id='contactLink'><a onclick="changePage('contact');">Contact</a></li>
+                    </ul>
+            </div>
+
+            <!-- Jumbotron -->
+            <div id='changebleBlock' class="jumbotron">
+                <img width="231" height="231" src="img/circle.png" align="left"/>
+                <h1>Hi!</h1>
+                <p class="lead">My name is Anton Tkachov. I'm Java Developer, and you are on my promo-site.<br />
+                    Here you can see my projects and information about me.</p>
+                <p><a class="btn btn-lg btn-success" onclick="changePage();">Go to skills and experience</a></p>
+            </div>
+
+
+            <!-- Site footer -->
+            <div class="footer">
+                <p>&copy; Anton Tkachov 2014</p>
+            </div>
+
+        </div> <!-- /container -->
+    </body>
+</html>
